@@ -16,4 +16,6 @@ add_executable(tests
 target_link_libraries(tests
   ${GLFW_LIBRARIES})
 
-
+# Build vec2
+add_executable(vec2
+  vec2.cpp)
