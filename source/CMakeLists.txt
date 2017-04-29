@@ -19,3 +19,11 @@ target_link_libraries(tests
 # Build vec2
 add_executable(vec2
   vec2.cpp)
+
+#Build mat2
+add_executable(mat2
+   mat2.cpp)
+
+#Build color
+add_executable(color
+   color.cpp)
