@@ -27,3 +27,11 @@ add_executable(mat2
 #Build color
 add_executable(color
    color.cpp)
+
+#Build cirlce
+add_executable(circle
+   circle.cpp)
+
+#Build rectangle
+add_executable(rectangle
+   rectangle.cpp)

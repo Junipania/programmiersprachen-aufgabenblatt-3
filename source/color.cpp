@@ -1,3 +1,5 @@
+#include "color.hpp"
+
 Color::Color(float num):
     r{num},
     g{num},

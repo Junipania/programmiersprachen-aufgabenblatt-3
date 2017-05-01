@@ -7,4 +7,4 @@ struct Color{
     Color(float num);
     Color(float r, float g, float b);
 
-}
+};

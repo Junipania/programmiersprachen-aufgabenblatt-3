@@ -2,6 +2,8 @@
 #include <catch.hpp>
 #include "vec2.cpp"
 #include "mat2.cpp"
+#include "cirlce.cpp"
+#include "rectangle.cpp"
 #include <cmath>
 #include <math.h>
 
@@ -54,6 +56,10 @@ Mat2 inverseMat{};
 Mat2 transMat{};
 
 Mat2 rotMat{};
+
+Circle cir{3.0, Color{0.0}, Vec2{2, 2}};
+
+Rectangle rec{Vec2{2, 2},Vec2{4, 4},Color{0.0}}
 
 float erg;
 
@@ -168,6 +174,18 @@ TEST_CASE("rotation","[rotation]"){
     CHECK(rotMat.b1 == 1);
     CHECK(rotMat.b2 == -0);
 }
+
+TEST_CASE("circle","[circle]"){
+    CHECK(cir.getRadius() == 3.0);
+    CHECK(cir.getColor() == {0.0, 0.0, 0.0});
+    CHECK(cir.getCenter() == {2, 2});
+}
+
+TEST_CASE("rectangle","[rectangle]"){
+    CHECK(rec.getMin() == {2, 2});
+    CHECK(rec.getMax() == {4, 4});
+    CHECK(rec.getColor() == {0.0, 0.0, 0.0})
+
 
 int main(int argc, char *argv[])
 {
