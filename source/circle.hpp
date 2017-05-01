@@ -11,4 +11,6 @@ class Circle {
     Vec2 getCenter();
 
     Circle(float radius, Color const& color, Vec2 const& center);
+
+    float circumference();
 };

@@ -185,7 +185,12 @@ TEST_CASE("rectangle","[rectangle]"){
     CHECK(rec.getMin() == {2, 2});
     CHECK(rec.getMax() == {4, 4});
     CHECK(rec.getColor() == {0.0, 0.0, 0.0})
+}
 
+TEST_CASE("circumference","[circumference]"){
+    CHECK(cir.circumference() == 18.84);
+    CHECK(rec.circumference() == 8.0);
+}
 
 int main(int argc, char *argv[])
 {

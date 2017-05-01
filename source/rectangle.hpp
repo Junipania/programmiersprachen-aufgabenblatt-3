@@ -7,4 +7,6 @@ class Rectangle{
     Vec2 const& max_;
 
     Rectangle(Vec2 const& min_, Vec2 const& max_, Color const& color);
+
+    float circumference();
 };
