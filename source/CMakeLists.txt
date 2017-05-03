@@ -4,6 +4,7 @@ add_executable(example
   glew.c
   example.cpp
   vec2.cpp
+  mat2.cpp
   circle.cpp
   color.cpp
   rectangle.cpp)

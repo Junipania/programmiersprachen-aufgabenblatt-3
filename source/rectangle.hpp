@@ -14,4 +14,6 @@ class Rectangle{
     Vec2 const& getMin()const;
     Color const& getColor()const;
     void draw(Window const& wins);
+    void draw(Window const& wins, Color const& clr);
+    bool is_inside(Vec2 const& point);
 };

@@ -28,7 +28,10 @@ int main(int argc, char* argv[])
     float x3{400 + 380 * std::sin(t-10.f)};
     float y3{400 + 380 * std::cos(t-10.f)};
     
-    Rectangle rec{Vec2{20, 20}, Vec2{40, 40}, Color{0.0}};
+    Rectangle rec1{Vec2{20, 20}, Vec2{100, 100}, Color{0.0}};
+    Rectangle rec2{Vec2{200, 200}, Vec2{400, 400}, Color{0.0}};
+    Circle cir1{50, Color{1.0, 0.0, 0.0}, Vec2{150, 150}};
+    Circle cir2{50, Color{1.0, 0.0, 0.0}, Vec2{500, 500}};
 
     win.draw_point(x1, y1,
         1.0f, 0.0f, 0.0f);
@@ -51,7 +54,10 @@ int main(int argc, char* argv[])
     std::string text = "mouse position: (" + std::to_string(m.first) + ", " + std::to_string(m.second) + ")";
     win.draw_text(10, 5, 35.0f, text);
 
-    rec.draw(win);
+    rec1.draw(win);
+    rec2.draw(win, Color{0.0, 0.0, 1.0});
+    cir1.draw(win);
+    cir2.draw(win, Color{0.0, 1.0, 0.0});
 
     win.update();
   }

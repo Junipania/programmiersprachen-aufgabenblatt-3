@@ -197,6 +197,15 @@ TEST_CASE("rectangle","[rectangle]"){
     CHECK(rec.getColor().b == 0.0f);
 }
 
+TEST_CASE("is_inside","[is_inside]"){
+    Circle cir{50, Color{1.0, 0.0, 0.0}, Vec2{150, 150}};
+    Rectangle rec{Vec2{200, 200}, Vec2{400, 400}, Color{0.0}};
+    CHECK(cir.is_inside(Vec2{175, 175}) == true);
+    CHECK(cir.is_inside(Vec2{0, 0}) == false);
+    CHECK(rec.is_inside(Vec2{100, 100}) == false);
+    CHECK(rec.is_inside(Vec2{300, 300}) == true);
+}
+
 int main(int argc, char *argv[])
 {
     return Catch::Session().run(argc, argv);
