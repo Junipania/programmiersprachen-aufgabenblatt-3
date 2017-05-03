@@ -1,10 +1,11 @@
 #include "circle.hpp"
 #include <math.h>
 
-Circle::Circle(float radius, Color const& color, Vec2 const& center):
-    radius{radius},
-    color{color},
-    center{center}{}
+
+Circle::Circle(float r, Color const& clr, Vec2 const& cent):
+    radius{r},
+    color{clr},
+    center{cent}{}
 
 float Circle::getRadius(){
     return this->radius;
@@ -21,3 +22,4 @@ Vec2 Circle::getCenter(){
 float Circle::circumference(){
     return 2 * M_PI * this->radius;
 }
+

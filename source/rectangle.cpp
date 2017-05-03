@@ -20,3 +20,6 @@ Color Rectangle::getColor(){
 
 float Rectangle::circumference(){
     return (2 * (this->max_.x - this->min_.x)) + (2 * (this->max_.y - this->min_.y));
+}
+
+

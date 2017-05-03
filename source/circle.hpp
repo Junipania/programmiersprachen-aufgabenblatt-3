@@ -1,16 +1,23 @@
-#include "color.cpp"
-#include "vec2.cpp"
+#ifndef CIRCLE_HPP
+#define CIRCLE_HPP
+
+#include "color.hpp"
+#include "vec2.hpp"
 
 class Circle {
     float radius;
-    Color const& color;
-    Vec2 const& center;
+    Color color;
+    Vec2 center;
 
+    public:
     float getRadius();
     Color getColor();
     Vec2 getCenter();
 
-    Circle(float radius, Color const& color, Vec2 const& center);
+    Circle(float r, Color const& clr, Vec2 const& cent);
 
     float circumference();
+    
 };
+
+#endif

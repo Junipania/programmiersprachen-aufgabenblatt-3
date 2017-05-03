@@ -1,5 +1,4 @@
 #include "mat2.hpp"
-#include "vec2.hpp"
 #include <math.h>
 #include <cmath>
 
