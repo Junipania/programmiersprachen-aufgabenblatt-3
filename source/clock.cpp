@@ -47,8 +47,8 @@ int main(int argc, char* argv[])
 
     Vec2 min {c, d};
 
-    float e = cent.x + 310 * std::cos((0.03f*t * M_PI - 565)/360);
-    float f = cent.y + 310 * std::sin((0.03f*t * M_PI - 565)/360);
+    float e = cent.x + 310 * std::cos((0.015f*t * M_PI - 565)/360);
+    float f = cent.y + 310 * std::sin((0.015f*t * M_PI - 565)/360);
 
     Vec2 hour {e, f};
 

@@ -102,9 +102,9 @@ TEST_CASE("matConstructor","[matConstructor]"){
     Mat2 emptyMat{};
     Mat2 filledMat{1, 2, 3, 4};
     CHECK(emptyMat.a1 == 1);
-    CHECK(emptyMat.a2 == 1);
+    CHECK(emptyMat.a2 == 0);
     CHECK(emptyMat.b1 == 1);
-    CHECK(emptyMat.b2 == 1);
+    CHECK(emptyMat.b2 == 0);
     CHECK(filledMat.a1 == 1);
     CHECK(filledMat.a2 == 2);
     CHECK(filledMat.b1 == 3);

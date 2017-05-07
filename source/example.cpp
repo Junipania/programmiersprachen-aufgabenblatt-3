@@ -55,9 +55,23 @@ int main(int argc, char* argv[])
     win.draw_text(10, 5, 35.0f, text);
 
     rec1.draw(win);
-    rec2.draw(win, Color{0.0, 0.0, 1.0});
+    rec2.draw(win, Color{0.0, 0.0, 0.0});
     cir1.draw(win);
     cir2.draw(win, Color{0.0, 1.0, 0.0});
+
+    if (cir1.is_inside(Vec2{m.first, m.second}) == true){
+        cir1.draw(win, Color{0.0, 0.0, 1.0 });   
+    }
+    if (cir2.is_inside(Vec2{m.first, m.second}) == true){
+        cir2.draw(win, Color{0.0, 0.0, 1.0 });   
+    }
+    if (rec1.is_inside(Vec2{m.first, m.second}) == true){
+        rec1.draw(win, Color{0.0, 0.0, 1.0 });   
+    }
+    if (rec2.is_inside(Vec2{m.first, m.second}) == true){
+        rec2.draw(win, Color{0.0, 0.0, 1.0 });   
+    }
+
 
     win.update();
   }

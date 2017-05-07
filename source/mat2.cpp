@@ -4,9 +4,9 @@
 
 Mat2::Mat2():
     a1{1},
-    a2{1},
+    a2{0},
     b1{1},
-    b2{1}{}
+    b2{0}{}
 
 Mat2::Mat2(float a1,float a2,float b1,float b2):
     a1{a1},
