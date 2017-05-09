@@ -2,6 +2,7 @@
 #include <vector>
 #include <list>
 #include <set>
+#include <map>
 #include <iostream>
 #include <iterator>
 #include <algorithm>
@@ -28,9 +29,7 @@ int main()
     std::cout<<"\n";
     std::cout<<"\n";
 
-
-
-    std::set<int> s1{};
+    std::set<unsigned int> s1{};
     unsigned int i = 0;
     unsigned int c = 0;
     while(i<=100){
@@ -45,10 +44,36 @@ int main()
         i += 1;
         c = 0;
     }
+    //std::cout<<"\n";
+    //std::copy(std::begin(s1), std::end(s1), std::ostream_iterator<int>(std::cout, "\n"));
+
+    std::set<unsigned int> s2{};
+    unsigned int it = 0;
+    for (it = 0; it <= 99; ++it){
+        unsigned int co = 0;
+        for(auto& s : s1){
+            if(it != s){
+                co += 1;
+            }        
+        }
+        if (co == s1.size()){
+            s2.insert(it);
+        }
+    }
     std::cout<<"\n";
-    std::copy(std::begin(s1), std::end(s1), std::ostream_iterator<int>(std::cout, "\n"));
+    std::cout<<"Anzahl unterschiedliche Zahlen:"<<s2.size()<<"\n";
 
-
+    std::map<float,float> m0;
+    float count = 0.0;
+    for (auto const &s : s2){
+        for (auto& l : l0){
+            if (l == s){
+                count += 1.0;
+            }
+        }
+        m0[s] = (count / l0.size());
+        std::cout<<s<<":"<<m0.find(s)->second<<"\n";
+    }
     return 0;
 }
 
