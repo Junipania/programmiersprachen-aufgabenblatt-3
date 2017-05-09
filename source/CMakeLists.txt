@@ -53,3 +53,7 @@ add_dependencies(clock glfw nanovg ${COPY_BINARY})
 add_executable(beispielprogramm
   beispielprogramm.cpp)
 
+#Build aufgabe2bis4
+add_executable(aufgabe2bis4
+  aufgabe2bis4.cpp)
+
