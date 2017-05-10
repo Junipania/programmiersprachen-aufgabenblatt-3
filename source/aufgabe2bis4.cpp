@@ -44,8 +44,8 @@ int main()
         i += 1;
         c = 0;
     }
-    //std::cout<<"\n";
-    //std::copy(std::begin(s1), std::end(s1), std::ostream_iterator<int>(std::cout, "\n"));
+    std::cout<<"\n";
+    std::copy(std::begin(s1), std::end(s1), std::ostream_iterator<int>(std::cout, "\n"));
 
     std::set<unsigned int> s2{};
     unsigned int it = 0;
